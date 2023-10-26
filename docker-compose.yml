@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  web_server:
+    image: django_project_image
+    ports:
+      - 8000:8000
+    volumes:
+#      - ./dist/django_project/manage_local.pex:/code/app
+#      - ./django_project:/code/app/django_project
+      - ./library:/code/app/library
+    working_dir: /code/app
+    command: "python /code/app runserver 0:8000"

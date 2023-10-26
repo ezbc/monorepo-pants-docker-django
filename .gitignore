@@ -1,0 +1,10 @@
+# Pants workspace files
+/.pants.*
+/dist/
+/.pids
+
+.eggs/
+__pycache__
+*.tar.gz
+*whl
+

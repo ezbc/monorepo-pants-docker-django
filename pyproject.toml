@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "monorepo-pants-docker-django"
+version = "0.0.0"
+description = "Monorepo example built with pants, using poetry requirement resolves, Django framework and docker to run the Django server."
+authors = ["Elijah Bernstein-Cooper <elijah@ddg.com>"]
+
+[tool.poetry.dependencies]
+django = "^3.2"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

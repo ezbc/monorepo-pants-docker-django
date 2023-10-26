@@ -1,0 +1,26 @@
+[GLOBAL]
+pants_version = "2.17.0"
+backend_packages = [
+    "pants.backend.docker",
+    "pants.backend.python",
+]
+
+[source]
+root_patterns = [
+    'django_project/',
+    'library/'
+]
+
+[python]
+interpreter_constraints = ['==3.11.*']
+enable_resolves = true
+default_resolve = "python-default"
+
+[python.resolves]
+python-default = "python-default.pex.lock"
+
+[python-infer]
+# Infer dependencies from strings that look like module/class names, such as are often
+# found in settings.py, where dependencies are enumerated as strings and not directly imported.
+string_imports = true
+use_rust_parser = true
